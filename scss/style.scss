@@ -3,5 +3,15 @@
 body {
   background: var(--bg);
   color: var(--text);
+  font-size: var(--text-size);
 }
 
+.container{
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+@media (min-width: 1240px){
+  .container{ max-width: 1240px;}
+}

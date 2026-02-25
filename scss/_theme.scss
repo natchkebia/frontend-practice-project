@@ -40,6 +40,7 @@ html[data-theme="dark"] {
 
   //  ტექსტები
   --text: rgba(255, 255, 255, 1);
+  --text-size:62.5%;
   --yellow-text: rgba(232, 219, 132, 1);
   --text-secondary: rgba(
     7,
@@ -63,4 +64,5 @@ html[data-theme="dark"] {
   //   ინფუთები
   --input-bg: rgba(255, 255, 255, 1);
   --input-text: rgba(30, 30, 30, 1);
+
 }
