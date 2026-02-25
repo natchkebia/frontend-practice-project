@@ -1,0 +1,16 @@
+/* Font families */
+$font-primary: "Poppins", sans-serif;
+$font-heading: "Plus Jakarta Sans", sans-serif;
+
+/* Font weights */
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+
+/* Base setup */
+body {
+  font-family: $font-primary;
+  font-weight: $fw-regular;
+}

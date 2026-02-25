@@ -1,0 +1,66 @@
+:root {
+  // ბექგრაუნდები
+  --bg: rgba(255, 255, 255, 1);
+  --section-bg: rgba(232, 219, 132, 1);
+  --button-bg: rgba(5, 42, 68, 1);
+
+  //  ტექსტები
+  --text: rgba(0, 0, 0, 1);
+  --yellow-text: rgba(232, 219, 132, 1);
+  --text-secondary: rgba(
+    7,
+    18,
+    16,
+    1
+  ); /*customers reviews სექციის ტექსტისთვის*/
+  --footer-headline: rgba(5, 42, 68, 1);
+  --footer-text: rgba(7, 18, 16, 1);
+
+  //   ნავიგაცია
+  --nav: rgba(5, 42, 68, 1);
+  --nav-text: rgba(255, 255, 255, 1);
+
+  //   ქარდი
+  --card: rgba(255, 255, 255, 1);
+  --card-text: rgba(18, 20, 29, 1);
+  //   ქარდის შედოუ
+  --shadow: 2px 4px 38px 0px rgba(0, 0, 0, 0.08);
+
+  //   ინფუთები
+  --input-bg: rgba(255, 255, 255, 1);
+  --input-text: rgba(30, 30, 30, 1);
+}
+
+/* DARK */
+html[data-theme="dark"] {
+  // ბექგრაუნდები
+  --bg: #1e2a39;
+  --section-bg: rgba(232, 219, 132, 1);
+  --button-bg: rgba(5, 42, 68, 1);
+
+  //  ტექსტები
+  --text: rgba(255, 255, 255, 1);
+  --yellow-text: rgba(232, 219, 132, 1);
+  --text-secondary: rgba(
+    7,
+    18,
+    16,
+    1
+  ); /*customers reviews სექციის ტექსტისთვის*/
+  --footer-headline: rgba(255, 255, 255, 1);
+  --footer-text: rgba(255, 255, 255, 1);
+
+  //   ნავიგაცია
+  --nav: rgba(5, 42, 68, 1);
+  --nav-text: rgba(255, 255, 255, 1);
+
+  //   ქარდი
+  --card: rgba(255, 255, 255, 1);
+  --card-text: rgba(18, 20, 29, 1);
+  //   ქარდის შედოუ
+  --shadow: 2px 4px 38px 0px rgba(0, 0, 0, 0.08);
+
+  //   ინფუთები
+  --input-bg: rgba(255, 255, 255, 1);
+  --input-text: rgba(30, 30, 30, 1);
+}
