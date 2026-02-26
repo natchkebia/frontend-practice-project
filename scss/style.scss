@@ -1,7 +1,8 @@
-@use "./reset";
-@use "./theme";
-@use "./typography";
-@use "./mixins";
+@use "theme";
+@use "typography";
+@use "reset";
+@use "Reviews";
+@use "mixins";
 
 body {
   background: var(--bg);
@@ -14,12 +15,58 @@ body {
   margin-inline: auto;
 }
 
-//ჰედერის სტილები
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1240px;
+  }
+
+  .reviews-head {
+    .review-title {
+      font-size: 4.2rem;
+      font-weight: typography.$fw-semibold;
+    }
+    .review-desc {
+      width: 100%;
+      font-size: 1.8rem;
+    }
+  }
+
+  .review-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .review-card {
+    width: auto;
+    flex: 1 1 0;
+  }
+
+  .card-head {
+    img {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+
+  .see-more {
+    display: none;
+  }
+
+  .slide-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
 
 .header {
   padding: 2rem 0;
   position: relative;
   z-index: 20;
+  
 }
 
 .header__inner {
@@ -29,7 +76,7 @@ body {
   position: relative;
 }
 
-.desktorp-logo {
+.desktop-logo {
   display: none;
 }
 
@@ -184,9 +231,7 @@ body {
 @media (min-width: 1024px) {
   //ჰედერის სტილები
 
-  .header {
-    margin-top: 3.4rem;
-  }
+ 
 
   .burger,
   .logo,
@@ -216,6 +261,7 @@ body {
     padding: 1.6rem 2.4rem;
     background-color: var(--nav);
     border-radius: 1.2rem;
+    width: 124rem;
   }
 
   .header__actions {
