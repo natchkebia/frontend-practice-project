@@ -18,45 +18,4 @@ body {
   .container {
     max-width: 1240px;
   }
-
-  .reviews-head {
-    .review-title {
-      font-size: 4.2rem;
-      font-weight: typography.$fw-semibold;
-    }
-    .review-desc {
-      width: 100%;
-      font-size: 1.8rem;
-    }
-  }
-
-  .review-cards {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    width: 100%;
-  }
-
-  .review-card {
-    width: auto;
-    flex: 1 1 0;
-  }
-
-  .card-head {
-    img {
-      width: 7rem;
-      height: 7rem;
-    }
-  }
-
-  .see-more {
-    display: none;
-  }
-
-  .slide-arrows {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
 }
