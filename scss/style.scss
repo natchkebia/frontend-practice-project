@@ -180,8 +180,310 @@ body {
 
 //ჰედერის სტილები
 
+// ჰირო სეცქცია
+
+.hero__inner {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.hero__title {
+  display: none;
+}
+
+.hero__titleAccent--mobile {
+  color: var(--hero-title);
+  font-size: 3.2rem;
+  font-weight: typography.$fw-regular;
+  margin-bottom: 1.4rem;
+}
+
+.hero__text {
+  color: var(--text);
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: typography.$fw-regular;
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  margin-left: 1rem;
+}
+
+.hero__actions--playlist {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  span {
+    color: var(--text);
+    font-weight: typography.$fw-medium;
+    font-size: 1.4rem;
+    line-height: 100%;
+  }
+}
+
+.hero__btnPrimary {
+  @include mixins.button(--button-bg, --button-text);
+  font-weight: typography.$fw-medium;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+  line-height: 100%;
+}
+
+.hero__btnGhost {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 2px -2px 38px 0px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    margin-left: 7px;
+  }
+}
+
+.hero__meta {
+  display: none;
+}
+.hero__media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 3rem;
+}
+
+.hero__mediaBox {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.hero__bg {
+  background-color: var(--section-bg);
+  border-radius: 0.9rem;
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.hero__img {
+  width: auto;
+  height: 120%;
+}
+
+.heroCard__container {
+  position: absolute;
+  left: -3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.heroCard {
+  width: 6.1rem;
+  height: 4.8rem;
+  background-color: var(--card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.6rem;
+  box-shadow: 1.72px 3.43px 32.62px 0px rgba(0, 0, 0, 0.08);
+
+  .heroCard__title {
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: rgba(30, 42, 57, 1);
+  }
+  .heroCard__sub {
+    font-size: 0.5rem;
+    font-weight: 350;
+    color: rgba(46, 46, 46, 1);
+  }
+
+  .heroCard__plus {
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: rgba(5, 42, 68, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    img {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+  }
+
+  .heroCard__miniAvatars {
+    display: flex;
+    img {
+      width: 1rem;
+      height: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: -0.4rem;
+    }
+    img:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 570px) {
+
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero__titleAccent--mobile {
+    display: none;
+  }
+
+  .hero__title {
+    display: block;
+    text-align: left;
+    font-size: 4.8rem;
+    font-weight: typography.$fw-bold;
+    color: var(--text);
+
+    span {
+      color: var(--section-bg);
+    }
+  }
+  .hero__text {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  .hero__btnPrimary {
+    padding: 1.5rem 4.5rem;
+    font-weight: typography.$fw-semibold;
+    font-size: 1.6rem;
+  }
+
+  .hero__btnGhost {
+    max-width: 5.3rem;
+    max-height: 5.3rem;
+  }
+
+  .hero__actions {
+    gap: 2.4rem;
+  }
+
+  .hero__actions--playlist {
+    gap: 1.2rem;
+
+    span {
+      color: var(--text);
+      font-weight: typography.$fw-semibold;
+      font-size: 1.6rem;
+    }
+  }
+
+  .hero__meta {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+
+    span {
+      font-size: 1.3rem;
+      color: var(--text);
+      font-weight: typography.$fw-medium;
+    }
+  }
+
+  .hero__avatars {
+    display: flex;
+
+    img {
+      width: 5.2rem;
+      height: 5.2rem;
+      border-radius: 50%;
+      margin-left: -2rem;
+    }
+    img:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .hero__mediaBox {
+    position: relative;
+    width: 100%;
+    max-width: 50.6rem;
+    width: 100%;
+  }
+  .hero__bg {
+    border-radius: 2rem;
+    width: 100%;
+    height: 40.8rem;
+  }
+
+  .heroCard__container {
+    gap: 1.2rem;
+  }
+  .heroCard {
+    width: 14.4rem;
+    height: 11.2rem;
+    gap: 1rem;
+    border-radius: 1.4rem;
+
+    .heroCard__title {
+      font-size: 1.3rem;
+    }
+    .heroCard__sub {
+      font-size: 1.2rem;
+    }
+
+    .heroCard__plus {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      img {
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+
+    .heroCard__miniAvatars {
+      img {
+        width: 2.3rem;
+        height: 2.3rem;
+      }
+    }
+  }
+
+}
 /* ===== დესკტოპ რეზოლუცია ===== */
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   //ჰედერის სტილები
 
   .header {
@@ -258,6 +560,18 @@ body {
   }
 
   //ჰედერის სტილები
+
+
+  //ჰეროს სტილები
+    .hero__inner {
+    flex-direction:row;
+  }
+
+    .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+  }
 }
 
 @media (min-width: 1240px) {
