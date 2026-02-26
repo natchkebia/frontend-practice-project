@@ -1,18 +1,267 @@
-@import "theme";
-@import "typography";
-@import 'reset';
+@use "./reset";
+@use "./theme";
+@use "./typography";
+@use "./mixins";
+
 body {
   background: var(--bg);
   color: var(--text);
-  font-size: var(--text-size);
 }
 
-.container{
+.container {
   width: 100%;
-  margin: 0 auto;
-  padding-inline: 16px;
+  padding: 0 2.4rem;
+  margin-inline: auto;
 }
 
-@media (min-width: 1240px){
-  .container{ max-width: 1240px;}
+//ჰედერის სტილები
+
+.header {
+  padding: 2rem 0;
+  position: relative;
+  z-index: 20;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.desktorp-logo {
+  display: none;
+}
+
+.logo,
+.header__actions {
+  position: relative;
+  z-index: 50;
+}
+
+.nav {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-top: 10rem;
+  gap: 3.5rem;
+  transform: translateX(100%);
+  z-index: 10;
+}
+
+.nav.is-open {
+  transform: translateX(0);
+}
+
+.nav__link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+.header__actions {
+  display: flex;
+  gap: 3.6rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header__actions--desktop {
+  display: none;
+}
+
+.nav__registration {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav__btn {
+  @include mixins.button(--text, --bg);
+  font-weight: typography.$fw-semibold;
+}
+
+/* =================== იცონების ცვლილების ნაწილი იწყეა აქ ===================== */
+
+/* --- ლაით მოუდი --- */
+
+.theme-icon--sun {
+  display: none;
+}
+
+.logo--dark {
+  display: none;
+}
+.burger {
+  max-height: 2.2rem;
+  max-width: 2.2rem;
+}
+
+.burger .icon--burger-dark {
+  display: none;
+}
+
+.burger .icon--close {
+  display: none;
+}
+
+.burger .icon--close-dark {
+  display: none;
+}
+
+/* ლაით მოუდის მენიუს გახსნის ნაწილი*/
+.header.menu-open .burger .icon--burger,
+.header.menu-open .burger .icon--burger-dark {
+  display: none;
+}
+
+.header.menu-open .burger .icon--close {
+  display: inline-block;
+}
+
+/* --- დარქ მოუდი --- */
+
+:root[data-theme="dark"] {
+  /* ლოგო */
+  .logo--light {
+    display: none;
+  }
+
+  .logo--dark {
+    display: block;
+  }
+
+  /* თემების ღილაკები */
+  .theme-icon--moon {
+    display: none;
+  }
+
+  .theme-icon--sun {
+    display: inline-block;
+  }
+
+  /* ბურგერის დაზურვა */
+  .burger .icon--burger {
+    display: none;
+  }
+
+  .burger .icon--burger-dark {
+    display: inline-block;
+  }
+
+  /* მენიუ ს გახსნა როცა მარტო დარქის დამხურავი ჩანს*/
+  .header.menu-open .burger .icon--burger,
+  .header.menu-open .burger .icon--burger-dark {
+    display: none;
+  }
+
+  .header.menu-open .burger .icon--close {
+    display: none;
+  }
+
+  .header.menu-open .burger .icon--close-dark {
+    display: inline-block;
+  }
+}
+
+//ჰედერის სტილები
+
+/* ===== დესკტოპ რეზოლუცია ===== */
+@media (min-width: 1024px) {
+  //ჰედერის სტილები
+
+  .header {
+    margin-top: 3.4rem;
+  }
+
+  .burger,
+  .logo,
+  .nav__registration {
+    display: none;
+  }
+
+  .desktorp-logo {
+    display: block;
+  }
+
+  .nav {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background: var(--nav);
+    padding: 1rem 2rem;
+    border-radius: 1.4rem;
+    gap: 2.4rem;
+  }
+
+  .nav__link {
+    color: var(--nav-text);
+  }
+
+  .header__inner {
+    padding: 1.6rem 2.4rem;
+    background-color: var(--nav);
+    border-radius: 1.2rem;
+  }
+
+  .header__actions {
+    display: none;
+  }
+
+  .header__actions--desktop {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 2.8rem;
+
+      button {
+        @include mixins.button(--button-header, --button-header-text);
+        font-weight: typography.$fw-semibold;
+      }
+    }
+  }
+
+  /* დესკროპზე თემის ღილაკები ლაით მოუდისთვის */
+  .desktop-theme-btn--sun {
+    display: none;
+  }
+
+  .desktop-theme-btn--moon {
+    display: inline-flex;
+  }
+
+  /* დესკროპზე თემის ღილაკები დარქ მოუდისთვის*/
+  :root[data-theme="dark"] .desktop-theme-btn--sun {
+    display: inline-flex;
+  }
+
+  :root[data-theme="dark"] .desktop-theme-btn--moon {
+    display: none;
+  }
+
+  //ჰედერის სტილები
+}
+
+@media (min-width: 1240px) {
+  .container {
+    max-width: 1240px;
+  }
 }

@@ -17,8 +17,159 @@
     <title>CareerPathNow</title>
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="#" class="logo">
+            <img class="logo--light" src="/images/icons/Logo.svg" alt="logo" />
+            <img
+              class="logo--dark"
+              src="/images/icons/Logo-dark.svg"
+              alt="logo"
+            />
+          </a>
+          <a href="#" class="desktorp-logo"
+            ><img src="/images/icons/desktop-logo.svg" alt="logo"
+          /></a>
+          <nav class="nav" id="nav">
+            <a href="#" class="nav__link">Home</a>
+            <a href="#" class="nav__link">About US</a>
+            <a href="#" class="nav__link">Services</a>
+            <a href="#" class="nav__link">Contact</a>
+            <div class="nav__registration">
+              <a href="#" class="nav__link">Sign In</a>
+              <button class="nav__btn">Free Trial</button>
+            </div>
+          </nav>
+          <div class="header__actions">
+            <button
+              class="icon-btn"
+              id="themeToggle"
+              aria-label="Toggle theme"
+              type="button"
+            >
+              <img
+                class="theme-icon theme-icon--moon"
+                src="/images/icons/moon.svg"
+                alt="moon"
+              />
+              <img
+                class="theme-icon theme-icon--sun"
+                src="/images/icons/sun-dark.svg"
+                alt="sun"
+              />
+            </button>
+            <button
+              class="icon-btn burger"
+              id="menuToggle"
+              aria-label="Toggle menu"
+              type="button"
+            >
+              <img
+                class="icon icon--burger"
+                src="/images/icons/burger_Menu.svg"
+                alt="Open menu"
+              />
+              <img
+                class="icon icon--burger-dark"
+                src="/images/icons/burger-menu0dark.svg"
+                alt="Open menu dark"
+              />
+              <img
+                class="icon icon--close"
+                src="/images/icons/CloseButton.svg"
+                alt="Close menu"
+              />
+              <img
+                class="icon icon--close-dark"
+                src="/images/icons/closebutton-dark.svg"
+                alt="Close menu dark"
+              />
+            </button>
+          </div>
+          <div class="header__actions--desktop">
+            <button
+              class="icon-btn desktop-theme-btn desktop-theme-btn--sun"
+              id="themeToggleDesktopSun"
+              type="button"
+            >
+              <img src="/images/icons/sun.svg" alt="sun" />
+            </button>
+            <button
+              class="icon-btn desktop-theme-btn desktop-theme-btn--moon"
+              id="themeToggleDesktopMoon"
+              type="button"
+            >
+              <img src="/images/icons/moon button-dark.svg" alt="moon" />
+            </button>
+            <div class="header__actions--desktop--registration">
+              <a href="#" class="nav__link">Sign In</a>
+              <button>Free Trial</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <main></main>
     <footer></footer>
+
+    <script>
+      // ===== მენიუ =====
+      const toggle = document.getElementById("menuToggle");
+      const nav = document.getElementById("nav");
+      const header = document.querySelector(".header");
+
+      if (toggle && nav && header) {
+        toggle.addEventListener("click", () => {
+          const open = nav.classList.toggle("is-open");
+          header.classList.toggle("menu-open", open);
+          document.body.style.overflow = open ? "hidden" : "";
+        });
+      }
+
+      // ===== თემები =====
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("themeToggle");
+
+      const themeToggleDesktopSun = document.getElementById(
+        "themeToggleDesktopSun",
+      );
+      const themeToggleDesktopMoon = document.getElementById(
+        "themeToggleDesktopMoon",
+      );
+
+      function getInitialTheme() {
+        const saved = localStorage.getItem("theme");
+        if (saved === "dark" || saved === "light") return saved;
+
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        return prefersDark ? "dark" : "light";
+      }
+
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+      }
+
+      function toggleTheme() {
+        const current = root.getAttribute("data-theme") || "light";
+        const next = current === "dark" ? "light" : "dark";
+        setTheme(next);
+      }
+      setTheme(getInitialTheme());
+
+      // მობილურის ღილაკები
+      if (themeToggle) {
+        themeToggle.addEventListener("click", toggleTheme);
+      }
+
+      // დესკტოპის ღილაკები
+      themeToggleDesktopSun?.addEventListener("click", toggleTheme);
+      themeToggleDesktopMoon?.addEventListener("click", toggleTheme);
+    </script>
   </body>
 </html>
