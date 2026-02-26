@@ -28,6 +28,7 @@ html[data-theme=dark] {
   --section-bg: rgba(232, 219, 132, 1);
   --button-bg: rgba(5, 42, 68, 1);
   --text: rgba(255, 255, 255, 1);
+  --text-size:62.5%;
   --yellow-text: rgba(232, 219, 132, 1);
   --text-secondary: rgba(
     7,
@@ -54,9 +55,44 @@ body {
   font-weight: 400;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
+  font-size: var(--text-size);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+@media (min-width: 1240px) {
+  .container {
+    max-width: 1240px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
