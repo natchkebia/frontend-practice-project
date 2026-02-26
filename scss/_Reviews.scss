@@ -28,6 +28,7 @@
 }
 
 .reviews-head {
+  margin-top: 8rem;
   @include flex-center();
   .review-title {
     color: var(--review-title);

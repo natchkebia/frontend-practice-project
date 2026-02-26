@@ -13,7 +13,6 @@ html {
   //  ტექსტები
   --text: rgba(0, 0, 0, 1);
   --yellow-text: rgba(232, 219, 132, 1);
-  --text-secondary: rgba(7, 18, 16, 1);
   --rev-btn-color: #ffffff;
   --font-size: 62.5%;
   --h1: 3.2rem;
@@ -61,7 +60,7 @@ html[data-theme="dark"] {
   --bg: #1e2a39;
   --section-bg: rgba(232, 219, 132, 1);
   --button-bg: rgba(255, 255, 255, 1);
-   --button-text: rgba(0, 0, 0, 1);
+  --button-text: rgba(0, 0, 0, 1);
   --button-header: rgba(255, 255, 255, 1);
   --button-header-text: rgba(0, 0, 0, 1);
 
@@ -69,12 +68,8 @@ html[data-theme="dark"] {
   --text: rgba(255, 255, 255, 1);
   --text-size: 62.5%;
   --yellow-text: rgba(232, 219, 132, 1);
-  --text-secondary: rgba(
-    7,
-    18,
-    16,
-    1
-  ); /*customers reviews სექციის ტექსტისთვის*/
+  --text-secondary: rgba(255, 255, 255, 1);
+  /*customers reviews სექციის ტექსტისთვის*/
   --hero-title: rgba(255, 255, 255, 1);
   --footer-headline: rgba(255, 255, 255, 1);
   --footer-text: rgba(255, 255, 255, 1);

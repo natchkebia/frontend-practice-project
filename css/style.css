@@ -7,11 +7,11 @@ html {
   --bg: rgba(255, 255, 255, 1);
   --section-bg: rgba(232, 219, 132, 1);
   --button-bg: rgba(5, 42, 68, 1);
+  --button-text: rgba(255, 255, 255, 1);
   --button-header: rgba(255, 255, 255, 1);
   --button-header-text: rgba(0, 0, 0, 1);
   --text: rgba(0, 0, 0, 1);
   --yellow-text: rgba(232, 219, 132, 1);
-  --text-secondary: rgba(7, 18, 16, 1);
   --rev-btn-color: #ffffff;
   --font-size: 62.5%;
   --h1: 3.2rem;
@@ -25,6 +25,13 @@ html {
   --card-radious: 10px;
   --see-more-btn: #052a44;
   /*customers reviews სექციის ტექსტისთვის*/
+  --text-secondary: rgba(
+    7,
+    18,
+    16,
+    1
+  ); /*customers reviews სექციის ტექსტისთვის*/
+  --hero-title: rgba(24, 59, 86, 1);
   --footer-headline: rgba(5, 42, 68, 1);
   --footer-text: rgba(7, 18, 16, 1);
   --nav: rgba(5, 42, 68, 1);
@@ -40,18 +47,16 @@ html {
 html[data-theme=dark] {
   --bg: #1e2a39;
   --section-bg: rgba(232, 219, 132, 1);
-  --button-bg: rgba(5, 42, 68, 1);
+  --button-bg: rgba(255, 255, 255, 1);
+  --button-text: rgba(0, 0, 0, 1);
   --button-header: rgba(255, 255, 255, 1);
   --button-header-text: rgba(0, 0, 0, 1);
   --text: rgba(255, 255, 255, 1);
   --text-size: 62.5%;
   --yellow-text: rgba(232, 219, 132, 1);
-  --text-secondary: rgba(
-    7,
-    18,
-    16,
-    1
-  ); /*customers reviews სექციის ტექსტისთვის*/
+  --text-secondary: rgba(255, 255, 255, 1);
+  /*customers reviews სექციის ტექსტისთვის*/
+  --hero-title: rgba(255, 255, 255, 1);
   --footer-headline: rgba(255, 255, 255, 1);
   --footer-text: rgba(255, 255, 255, 1);
   --nav: rgba(5, 42, 68, 1);
@@ -145,63 +150,11 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;}
-:root {
-  --bg: rgba(255, 255, 255, 1);
-  --section-bg: rgba(232, 219, 132, 1);
-  --button-bg: rgba(5, 42, 68, 1);
-  --button-text: rgba(255, 255, 255, 1);
-  --button-header: rgba(255, 255, 255, 1);
-  --button-header-text: rgba(0, 0, 0, 1);
-  --text: rgba(0, 0, 0, 1);
-  --yellow-text: rgba(232, 219, 132, 1);
-  --text-secondary: rgba(
-    7,
-    18,
-    16,
-    1
-  ); /*customers reviews სექციის ტექსტისთვის*/
-  --hero-title: rgba(24, 59, 86, 1);
-  --footer-headline: rgba(5, 42, 68, 1);
-  --footer-text: rgba(7, 18, 16, 1);
-  --nav: rgba(5, 42, 68, 1);
-  --nav-text: rgba(255, 255, 255, 1);
-  --card: rgba(255, 255, 255, 1);
-  --card-text: rgba(18, 20, 29, 1);
-  --shadow: 2px 4px 38px 0px rgba(0, 0, 0, 0.08);
-  --input-bg: rgba(255, 255, 255, 1);
-  --input-text: rgba(30, 30, 30, 1);
-}
-
-/* DARK */
-html[data-theme=dark] {
-  --bg: #1e2a39;
-  --section-bg: rgba(232, 219, 132, 1);
-  --button-bg: rgba(255, 255, 255, 1);
-  --button-text: rgba(0, 0, 0, 1);
-  --button-header: rgba(255, 255, 255, 1);
-  --button-header-text: rgba(0, 0, 0, 1);
-  --text: rgba(255, 255, 255, 1);
-  --yellow-text: rgba(232, 219, 132, 1);
-  --text-secondary: rgba(
-    7,
-    18,
-    16,
-    1
-  ); /*customers reviews სექციის ტექსტისთვის*/
-  --hero-title: rgba(255, 255, 255, 1);
-  --footer-headline: rgba(255, 255, 255, 1);
-  --footer-text: rgba(255, 255, 255, 1);
-  --nav: rgba(5, 42, 68, 1);
-  --nav-text: rgba(255, 255, 255, 1);
-  --card: rgba(255, 255, 255, 1);
-  --card-text: rgba(18, 20, 29, 1);
-  --shadow: 2px 4px 38px 0px rgba(0, 0, 0, 0.08);
-  --input-bg: rgba(255, 255, 255, 1);
-  --input-text: rgba(30, 30, 30, 1);
+  flex-direction: column;
 }
 
 .reviews-head {
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,42 +268,6 @@ body {
   margin-inline: auto;
 }
 
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1240px;
-  }
-  .reviews-head .review-title {
-    font-size: 4.2rem;
-    font-weight: 600;
-  }
-  .reviews-head .review-desc {
-    width: 100%;
-    font-size: 1.8rem;
-  }
-  .review-cards {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    width: 100%;
-  }
-  .review-card {
-    width: auto;
-    flex: 1 1 0;
-  }
-  .card-head img {
-    width: 7rem;
-    height: 7rem;
-  }
-  .see-more {
-    display: none;
-  }
-  .slide-arrows {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-}
 .header {
   padding: 2rem 0;
   position: relative;
@@ -362,9 +279,10 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  width: 100%;
 }
 
-.desktop-logo {
+.desktorp-logo {
   display: none;
 }
 
@@ -852,7 +770,6 @@ body {
     padding: 1.6rem 2.4rem;
     background-color: var(--nav);
     border-radius: 1.2rem;
-    width: 124rem;
   }
   .header__actions {
     display: none;
@@ -919,6 +836,44 @@ body {
 @media (min-width: 1240px) {
   .container {
     max-width: 1240px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1240px;
+  }
+  .reviews-head .review-title {
+    font-size: 4.2rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .reviews-head .review-desc {
+    width: 100%;
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+  }
+  .review-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+  }
+  .review-card {
+    width: auto;
+    flex: 1 1 0;
+  }
+  .card-head img {
+    width: 7rem;
+    height: 7rem;
+  }
+  .see-more {
+    display: none;
+  }
+  .slide-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
 }
 

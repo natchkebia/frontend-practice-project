@@ -15,58 +15,12 @@ body {
   margin-inline: auto;
 }
 
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1240px;
-  }
-
-  .reviews-head {
-    .review-title {
-      font-size: 4.2rem;
-      font-weight: typography.$fw-semibold;
-    }
-    .review-desc {
-      width: 100%;
-      font-size: 1.8rem;
-    }
-  }
-
-  .review-cards {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    width: 100%;
-  }
-
-  .review-card {
-    width: auto;
-    flex: 1 1 0;
-  }
-
-  .card-head {
-    img {
-      width: 7rem;
-      height: 7rem;
-    }
-  }
-
-  .see-more {
-    display: none;
-  }
-
-  .slide-arrows {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-}
+//ჰედერის სტილები
 
 .header {
   padding: 2rem 0;
   position: relative;
   z-index: 20;
-  
 }
 
 .header__inner {
@@ -74,9 +28,10 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  width: 100%;
 }
 
-.desktop-logo {
+.desktorp-logo {
   display: none;
 }
 
@@ -231,7 +186,7 @@ body {
 
 .hero__inner {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   margin-top: 3rem;
   text-align: center;
@@ -401,8 +356,6 @@ body {
 }
 
 @media (min-width: 570px) {
-
-
   .hero__content {
     display: flex;
     flex-direction: column;
@@ -527,13 +480,14 @@ body {
       }
     }
   }
-
 }
 /* ===== დესკტოპ რეზოლუცია ===== */
-@media (min-width: 1000px) {
-  //ჰედერის სტილები
+@media (min-width: 1024px) {
+ //ჰედერის სტილები
 
- 
+  .header {
+    margin-top: 3.4rem;
+  }
 
   .burger,
   .logo,
@@ -563,7 +517,6 @@ body {
     padding: 1.6rem 2.4rem;
     background-color: var(--nav);
     border-radius: 1.2rem;
-    width: 124rem;
   }
 
   .header__actions {
@@ -607,21 +560,70 @@ body {
 
   //ჰედერის სტილები
 
-
   //ჰეროს სტილები
-    .hero__inner {
-    flex-direction:row;
+  .hero__inner {
+    flex-direction: row;
   }
 
-    .hero__content {
+  .hero__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start
+    align-items: flex-start;
   }
 }
 
 @media (min-width: 1240px) {
   .container {
     max-width: 1240px;
+  }
+}
+
+@media (min-width: 1440px) {
+  
+  .container {
+    max-width: 1240px;
+  }
+
+  .reviews-head {
+    .review-title {
+      font-size: 4.2rem;
+      font-weight: typography.$fw-semibold;
+      color: var(--text);
+    }
+    .review-desc {
+      width: 100%;
+      font-size: 1.8rem;
+      color: var(--text-secondary);
+    }
+  }
+
+  .review-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .review-card {
+    width: auto;
+    flex: 1 1 0;
+  }
+
+  .card-head {
+    img {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+
+  .see-more {
+    display: none;
+  }
+
+  .slide-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
 }
