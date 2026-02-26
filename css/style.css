@@ -1,17 +1,109 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 4 | @use "Reviews";
- *   | ^^^^^^^^^^^^^^
- *   '
- *   scss/style.scss 4:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 4 \2502  @use \"Reviews\";\a   \2502  ^^^^^^^^^^^^^^\a   \2575 \a   scss/style.scss 4:1  root stylesheet";
+@charset "UTF-8";
+:root {
+  --bg: rgba(255, 255, 255, 1);
+  --section-bg: rgba(232, 219, 132, 1);
+  --button-bg: rgba(5, 42, 68, 1);
+  --text: rgba(0, 0, 0, 1);
+  --yellow-text: rgba(232, 219, 132, 1);
+  --text-secondary: rgba(7, 18, 16, 1);
+  --rev-btn-color: #ffffff;
+  --font-size: 62.5%;
+  --h1: 3.2rem;
+  --h2: 2.8rem;
+  --h3: 1.6rem;
+  --p: 1.2rem;
+  --card-prof: 0.9rem;
+  --card-name: 1.2rem;
+  --review-title: #183b56;
+  --review-desc: #5a7184;
+  --card-radious: 10px;
+  --see-more-btn: #052a44;
+  /*customers reviews სექციის ტექსტისთვის*/
+  --footer-headline: rgba(5, 42, 68, 1);
+  --footer-text: rgba(7, 18, 16, 1);
+  --nav: rgba(5, 42, 68, 1);
+  --nav-text: rgba(255, 255, 255, 1);
+  --card: rgba(255, 255, 255, 1);
+  --card-text: rgba(18, 20, 29, 1);
+  --shadow: 2px 4px 38px 0px rgba(0, 0, 0, 0.08);
+  --input-bg: rgba(255, 255, 255, 1);
+  --input-text: rgba(30, 30, 30, 1);
 }
+
+/* DARK */
+html[data-theme=dark] {
+  --bg: #1e2a39;
+  --section-bg: rgba(232, 219, 132, 1);
+  --button-bg: rgba(5, 42, 68, 1);
+  --text: rgba(255, 255, 255, 1);
+  --text-size: 62.5%;
+  --yellow-text: rgba(232, 219, 132, 1);
+  --text-secondary: rgba(
+    7,
+    18,
+    16,
+    1
+  ); /*customers reviews სექციის ტექსტისთვის*/
+  --footer-headline: rgba(255, 255, 255, 1);
+  --footer-text: rgba(255, 255, 255, 1);
+  --nav: rgba(5, 42, 68, 1);
+  --nav-text: rgba(255, 255, 255, 1);
+  --card: rgba(255, 255, 255, 1);
+  --card-text: rgba(18, 20, 29, 1);
+  --shadow: 2px 4px 38px 0px rgba(0, 0, 0, 0.08);
+  --input-bg: rgba(255, 255, 255, 1);
+  --input-text: rgba(30, 30, 30, 1);
+}
+
+/* Font families */
+/* Font weights */
+/* Base setup */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1240px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
