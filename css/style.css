@@ -665,6 +665,7 @@ body {
   flex-direction: column;
   gap: 5.5rem;
   margin-bottom: 2.6rem;
+  z-index: 2;
 }
 
 .about-card {
@@ -736,6 +737,10 @@ body {
   font-weight: 500;
   font-size: 1.4;
   background-color: rgb(5, 42, 68);
+}
+
+.about__container > img {
+  display: none;
 }
 
 @media (min-width: 570px) {
@@ -964,6 +969,25 @@ body {
   }
   .about__btn {
     padding: 1.5rem 4.3rem;
+  }
+  .about__container {
+    position: relative;
+  }
+  .about__container .ellipse {
+    display: block;
+  }
+  .about__container .ellipse,
+  .about__container .ellipse-dark {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    z-index: 1;
+  }
+  :root[data-theme=dark] .ellipse-dark {
+    display: inline-flex;
+  }
+  :root[data-theme=dark] .ellipse {
+    display: none;
   }
 }
 @media (min-width: 1240px) {
